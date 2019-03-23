@@ -7,7 +7,7 @@ data:extend(
     name = "fast-long-handed-inserter",
     icon = "__FastFurnaces__/graphics/icons/fast-long-inserter.png",
 	icon_size = 32,
-    flags = {"goes-to-quickbar"},
+    flags = {},
     subgroup = "inserter",
     order = "c[long-handed-inserter]",
     place_result = "fast-long-handed-inserter",
@@ -228,9 +228,9 @@ data:extend(
 	  count = 100,
 	  ingredients =
 	  {
-		{"science-pack-1", 1},
-		{"science-pack-2", 1},
-		{"science-pack-3", 1},
+		{"automation-science-pack", 1},
+		{"logistic-science-pack", 1},
+		{"chemical-science-pack", 1},
 		{"production-science-pack", 1},
 	  },
 	  time = 30

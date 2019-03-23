@@ -7,7 +7,7 @@ data:extend(
     name = "fast--pump",
     icon = "__FastFurnaces__/graphics/icons/small-pump.png",
 	icon_size = 32,
-    flags = {"goes-to-quickbar"},
+    flags = {},
     subgroup = "energy-pipe-distribution",
     order = "f[pump]-f[fast--pump-1-2]",
     place_result = "fast--pump",
@@ -18,7 +18,7 @@ data:extend(
     name = "big-offshore-pump",
     icon = "__FastFurnaces__/graphics/icons/offshore-pump.png",
 	icon_size = 32,
-    flags = {"goes-to-quickbar"},
+    flags = {},
     subgroup = "extraction-machine",
     order = "b[fluids]-a[big-offshore-pump]",
     place_result = "big-offshore-pump",
@@ -56,6 +56,9 @@ data:extend(
     icon = "__FastFurnaces__/graphics/icons/small-pump.png",
 	icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
+    collision_mask = { "ground-tile", "object-layer" },
+    fluid_box_tile_collision_test = { "ground-tile" },
+    adjacent_tile_collision_test = { "water-tile" },
     minable = {mining_time = 1, result = "fast--pump"},
     max_health = 250,
     fast_replaceable_group = "pipe",
@@ -83,7 +86,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.015 / 2.5
+      emissions_per_second_per_watt = 0.015 / 2.5
     },
     energy_usage = "150kW",
     pumping_speed = 800,
@@ -242,9 +245,9 @@ data:extend(
       count = 150,
       ingredients =
       {
-        {"science-pack-1", 2},
-        {"science-pack-2", 2},
-        {"science-pack-3", 1},
+        {"automation-science-pack", 2},
+        {"logistic-science-pack", 2},
+        {"chemical-science-pack", 1},
       },
       time = 60
     },

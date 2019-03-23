@@ -7,7 +7,7 @@ data:extend(
     name = "fast-chemical",
     icon = "__FastFurnaces__/graphics/icons/chemical-plant.png",
 	icon_size = 32,
-    flags = {"goes-to-quickbar"},
+    flags = {},
     subgroup = "production-machine",
     order = "f[chemical-plant]-f[fast-chemical-1-2]",
     place_result = "fast-chemical",
@@ -145,7 +145,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.05 / 3.5
+      emissions_per_second_per_watt = 0.05 / 3.5
     },
     energy_usage = "400kW",
     ingredient_count = 4,
@@ -211,9 +211,9 @@ data:extend(
       count = 200,
       ingredients =
       {
-        {"science-pack-1", 4},
-        {"science-pack-2", 2},
-        {"science-pack-3", 1},
+        {"automation-science-pack", 4},
+        {"logistic-science-pack", 2},
+        {"chemical-science-pack", 1},
         {"production-science-pack", 1}
       },
       time = 60

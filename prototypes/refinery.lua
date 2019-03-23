@@ -7,7 +7,7 @@ data:extend(
     name = "fast-refinery",
     icon = "__FastFurnaces__/graphics/icons/oil-refinery.png",
 	icon_size = 32,
-    flags = {"goes-to-quickbar"},
+    flags = {},
     subgroup = "production-machine",
     order = "f[oil-refinery]-f[fast-refinery-1-2]",
     place_result = "fast-refinery",
@@ -51,7 +51,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions = 0.05 / 3.5
+      emissions_per_second_per_watt = 0.05 / 3.5
     },
     energy_usage = "900kW",
     ingredient_count = 4,
@@ -188,10 +188,10 @@ data:extend(
       count = 100,
       ingredients =
       {
-        {"science-pack-1", 2},
-        {"science-pack-2", 2},
-        {"science-pack-3", 1},
-        {"high-tech-science-pack", 1},
+        {"automation-science-pack", 2},
+        {"logistic-science-pack", 2},
+        {"chemical-science-pack", 1},
+        {"utility-science-pack", 1},
         {"production-science-pack", 1}
       },
       time = 60

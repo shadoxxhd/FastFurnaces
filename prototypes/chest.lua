@@ -10,7 +10,7 @@ local function createChest(name)
 	--log("Creating big version of " .. name .. " with name " .. chest.name)
 	chest.icon = "__FastFurnaces__/graphics/icons/" .. chest.name .. ".png"
 	chest.minable.result = chest.name
-	chest.minable.hardness = chest.minable.hardness*1.2
+	--chest.minable.hardness = chest.minable.hardness*1.2
 	chest.max_health = chest.max_health*1.2
 	chest.inventory_size = 144
 	if chest.num_logistic_slots then
@@ -25,7 +25,7 @@ local function createChest(name)
 			name = chest.name,
 			icon = chest.icon,
 			icon_size = chest.icon_size,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "logistic-network",
 			order = "a[storage]-d[" .. chest.name .. "]",
 			place_result = chest.name,
@@ -74,10 +74,10 @@ data:extend(
       count = 100,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
-        {"high-tech-science-pack", 1},
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"utility-science-pack", 1},
       },
       time = 40
     },
